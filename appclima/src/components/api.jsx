@@ -9,7 +9,7 @@ function Api() {
 
   function Busqueda(ciudad) {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=5e9f8d51cd70185f32252910bf3b5566&units=metric`
+      `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=5e9f8d51cd70185f32252910bf3b5566&units=metric`
     )
       .then((response) => response.json())
       .then((data) => {

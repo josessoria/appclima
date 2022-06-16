@@ -3,6 +3,12 @@ import "./main.scss";
 import { FaSearch } from "react-icons/fa";
 
 const Main = ({ Busqueda }) => {
+  window.addEventListener("keypress",(event)=>{
+    if(event.key==="Enter"){
+      event.preventDefault()
+      Busqueda(document.getElementById("value").value)
+    }
+  })
   return (
     <div>
       <div className="backgroundmain">
