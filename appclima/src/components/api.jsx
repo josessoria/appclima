@@ -8,6 +8,7 @@ function Api() {
   const [cities, setCities] = useState([])
 
   function Busqueda(ciudad) {
+    
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=5e9f8d51cd70185f32252910bf3b5566&units=metric`
     )
@@ -26,16 +27,16 @@ function Api() {
           };
           setCities(ciudad)
         } else {
-          alert("mi ray no se encontro tu city");
+          console.log("mi ray no se encontro tu city");
         }
+        
       });
+      
   }
   
   return <div>
     <Main Busqueda={Busqueda}></Main>
     <Cards cities={cities}></Cards>
-    {console.log(cities)}
-
     
   </div>;
 }
